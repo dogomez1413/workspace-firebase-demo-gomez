@@ -23,3 +23,6 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
 });
 
 // update the result in table
+
+
+//get 

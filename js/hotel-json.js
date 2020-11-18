@@ -36,6 +36,17 @@ $("input[type='button']").click(function(e) {
     .add(inputJson);
 */
 
+
+firebase
+    .firestore()
+    .collection("hoteldata")
+    .onSnapshot(function(querySnapshot){
+      console.log(querySnapshot.size);
+      querySnapshot.forEach(doc =>{
+          console.log(doc.data());
+      });
+    });
+
   /* clear the entry */
   $("form")[0].reset();
 });
