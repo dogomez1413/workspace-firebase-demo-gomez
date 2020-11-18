@@ -35,18 +35,22 @@ $("input[type='button']").click(function(e) {
     .collection("hotelreservation")
     .add(inputJson);
 */
-
-
-firebase
+  /* save the data to database */
+  firebase
     .firestore()
-    .collection("hoteldata")
-    .onSnapshot(function(querySnapshot){
-      console.log(querySnapshot.size);
-      querySnapshot.forEach(doc =>{
-          console.log(doc.data());
-      });
-    });
+    .collection("hoteldata") // use different name
+    .add(inputJson);
 
   /* clear the entry */
   $("form")[0].reset();
+
+  firebase
+    .firestore()
+    .collection("hoteldata")
+    .onSnapshot(function(querySnapshot) {
+      console.log(querySnapshot.size);
+      querySnapshot.forEach(doc => {
+        console.log(doc.data());
+      });
+    });
 });
