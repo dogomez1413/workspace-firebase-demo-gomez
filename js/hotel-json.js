@@ -20,7 +20,7 @@ $("input[type='button']").click(function(e) {
   for (var i = 0; i < inputdata.length; i++) {
     var name = inputdata[i]["name"];
     var value = inputdata[i]["value"];
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     inputJson[name] = value;
   }
 
