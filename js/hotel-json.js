@@ -1,13 +1,13 @@
-var firebaseConfig = {
-  apiKey: "AIzaSyDjdVP2wSWz91dPgET3KIf4XbdxPB_2l1w",
-  authDomain: "javascriptdemo-237db.firebaseapp.com",
-  databaseURL: "https://javascriptdemo-237db.firebaseio.com",
-  projectId: "javascriptdemo-237db",
-  storageBucket: "javascriptdemo-237db.appspot.com",
-  messagingSenderId: "397768045903",
-  appId: "1:397768045903:web:64fc692aef3653b407013a",
-  measurementId: "G-9W77ZD235X"
+const firebaseConfig = {
+  apiKey: "AIzaSyDiy9nV3De-KF0sEQfRqfuCX02tUlwrpb4",
+  authDomain: "hotelres-7b499.firebaseapp.com",
+  databaseURL: "https://hotelres-7b499.firebaseio.com",
+  projectId: "hotelres-7b499",
+  storageBucket: "hotelres-7b499.appspot.com",
+  messagingSenderId: "612271708226",
+  appId: "1:612271708226:web:872c8d6f40168b20d935db"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -66,8 +66,9 @@ firebase
     //console.log(querySnapshot);
     console.log(querySnapshot.size);
     querySnapshot.forEach(doc => {
-      var roomtype = doc.data().room;
-      if (roomtype == "1 Bedroom Smaller Suite $139") {
-      }
+      console.log(doc.data());
+      //var roomtype = doc.data().room;
+      //if (roomtype == "1 Bedroom Smaller Suite $139") {
+      //}
     });
   });
