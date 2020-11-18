@@ -29,12 +29,12 @@ $("input[type='button']").click(function(e) {
   // var cost = parseInt(inputJson["room"].slice(-3));
   // console.log("The cost for this reservation is " + night * cost);
 
-  /* save the data to database 
+  //save the data to database
   firebase
     .firestore()
     .collection("hotelreservation")
     .add(inputJson);
-*/
+
   /* save the data to database */
   firebase
     .firestore()
@@ -43,14 +43,12 @@ $("input[type='button']").click(function(e) {
 
   /* clear the entry */
   $("form")[0].reset();
-
-  firebase
-    .firestore()
-    .collection("hoteldata")
-    .onSnapshot(function(querySnapshot) {
-      console.log(querySnapshot.size);
-      querySnapshot.forEach(doc => {
-        console.log(doc.data());
-      });
-    });
 });
+
+firebase
+  .firestore()
+  .collection("hoteldata")
+  .onSnapshot(function(querySnapshot) {
+    console.log(querySnapshot);
+    console.log(querySnapshot.size);
+  });
