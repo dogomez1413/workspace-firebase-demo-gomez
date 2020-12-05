@@ -15,7 +15,8 @@ $("#signup-form").submit(function(e) {
   e.preventDefault();
   //get the username(email) and password from the form
   // change the following code
-  var email = document.getElementById("userName").value;
+
+  var email = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   console.log("submit");
 
@@ -28,7 +29,6 @@ $("#signup-form").submit(function(e) {
       // ...
 
       console.log("You are signed up");
-      user.updateProfile({ displayName: "David G" });
       window.location.href = "Login.html";
     })
     .catch(error => {
