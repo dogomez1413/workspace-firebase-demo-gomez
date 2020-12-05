@@ -1,7 +1,8 @@
-const firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyDif6lW-4auZoEIGhPP_J9_Ax0amhi8paU",
   authDomain: "hotel-f3b13.firebaseapp.com",
   projectId: "hotel-f3b13",
+  databaseURL: "https://hotel-f3b13-default-rtdb.firebaseio.com/",
   storageBucket: "hotel-f3b13.appspot.com",
   messagingSenderId: "1013758362049",
   appId: "1:1013758362049:web:393530d4d0a7522bbb6f40",
