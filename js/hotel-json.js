@@ -1,15 +1,20 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDiy9nV3De-KF0sEQfRqfuCX02tUlwrpb4",
-  authDomain: "hotelres-7b499.firebaseapp.com",
-  databaseURL: "https://hotelres-7b499.firebaseio.com",
-  projectId: "hotelres-7b499",
-  storageBucket: "hotelres-7b499.appspot.com",
-  messagingSenderId: "612271708226",
-  appId: "1:612271708226:web:872c8d6f40168b20d935db"
+  apiKey: "AIzaSyDif6lW-4auZoEIGhPP_J9_Ax0amhi8paU",
+  authDomain: "hotel-f3b13.firebaseapp.com",
+  projectId: "hotel-f3b13",
+  storageBucket: "hotel-f3b13.appspot.com",
+  messagingSenderId: "1013758362049",
+  appId: "1:1013758362049:web:992a201f062c1cb2bb6f40",
+  measurementId: "G-1RGZNY84KW"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+/* object examples 
+var testJson = {};
+testJson["lastname"] = "zhang";
+testJson["location"] = "aiken";
+console.log(testJson);
+*/
 
 // enter data in
 $("input[type='button']").click(function(e) {
@@ -25,14 +30,10 @@ $("input[type='button']").click(function(e) {
   }
 
   console.log(inputJson);
-  //var night = parseInt(inputJson["num"]);
-  // var cost = parseInt(inputJson["room"].slice(-3));
-  // console.log("The cost for this reservation is " + night * cost);
-
   /* save the data to database */
   firebase
     .firestore()
-    .collection("hoteldata") // use different name
+    .collection("hotelResData") // use different name
     .add(inputJson);
 
   /* clear the entry */
@@ -45,30 +46,15 @@ array1.forEach(element => console.log(element));
 */
 
 /* read the data from the database */
-/*
+
 firebase
   .firestore()
-  .collection("hoteldata")
-  .onSnapshot(function(querySnapshot) {
+  .collection("hotelResData")
+  .onSnapshot(querySnapshot => {
     console.log(querySnapshot.size);
     querySnapshot.forEach(doc => {
       console.log(doc.data());
       console.log(doc.data().room);
       console.log(doc.data().checkout);
-    });
-  });
-*/
-
-firebase
-  .firestore()
-  .collection("hoteldata")
-  .onSnapshot(function(querySnapshot) {
-    //console.log(querySnapshot);
-    console.log(querySnapshot.size);
-    querySnapshot.forEach(doc => {
-      console.log(doc.data());
-      //var roomtype = doc.data().room;
-      //if (roomtype == "1 Bedroom Smaller Suite $139") {
-      //}
     });
   });
