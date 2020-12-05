@@ -15,8 +15,9 @@ $("#signup-form").submit(function(e) {
   e.preventDefault();
   //get the username(email) and password from the form
   // change the following code
-  var email = "dogomez@usca.edu";
-  var password = "Cartoon12";
+  var email = document.getElementById("userName").value;
+  var password = document.getElementById("password").value;
+  console.log("submit");
 
   // create a user with email address and password
   firebase
@@ -27,6 +28,7 @@ $("#signup-form").submit(function(e) {
       // ...
 
       console.log("You are signed up");
+      user.updateProfile({ displayName: "David G" });
       window.location.href = "Login.html";
     })
     .catch(error => {
