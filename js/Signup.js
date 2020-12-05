@@ -1,12 +1,11 @@
 var firebaseConfig = {
   apiKey: "AIzaSyDif6lW-4auZoEIGhPP_J9_Ax0amhi8paU",
   authDomain: "hotel-f3b13.firebaseapp.com",
-  databaseURL: "https://hotel-f3b13-default-rtdb.firebaseio.com",
   projectId: "hotel-f3b13",
   storageBucket: "hotel-f3b13.appspot.com",
   messagingSenderId: "1013758362049",
-  appId: "1:1013758362049:web:0faaad887cb524efbb6f40",
-  measurementId: "G-89STLL3H5W"
+  appId: "1:1013758362049:web:e9c9ec2c4d00458dbb6f40",
+  measurementId: "G-9DQE7ZJD0J"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

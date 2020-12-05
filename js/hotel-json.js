@@ -5,8 +5,8 @@ var firebaseConfig = {
   projectId: "hotel-f3b13",
   storageBucket: "hotel-f3b13.appspot.com",
   messagingSenderId: "1013758362049",
-  appId: "1:1013758362049:web:0faaad887cb524efbb6f40",
-  measurementId: "G-89STLL3H5W"
+  appId: "1:1013758362049:web:992a201f062c1cb2bb6f40",
+  measurementId: "G-1RGZNY84KW"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
